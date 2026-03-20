@@ -4,6 +4,9 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <title>Anne Broens Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -11,15 +14,13 @@
    <!--Header-->
 
     <header>
-<div class="content">
-  <a href="index.html" class="myName">Anne Broens</a>
+  <a class="logo">Anne Broens</a>
   <nav>
     <ul>
-      <li><a id="contact" href="#">Contact</a></li>
+      <li><a id="contact" href="#">Contact me</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Projects in progress</a></li>
       <li><a href="#">Skills</a></li>
-      <li><a href="#">My CV</a></li>
       <li><a href="#">Blog</a></li>
     </ul>
   </nav>
@@ -28,23 +29,39 @@
 
     <!--About me-->
 
-    <h2>About me</h2>
-    <p>Hoi! I'm Anne, originally from the Netherlands. In 2022, I moved to Paris and currently work at Hermès as a trilingual client advisor. <br>
-      I'm transitioning into web development, and I'm learning as much as I can alongside my full-time job. <br>
-      I'm still exploring which areas of development excite me the most, so this journey is full of discovery and experimentation. <br> 
-      Follow along to see the projects I build, the skills I develop, and the direction my path takes as I work toward becoming a full-time developer.</p>
+    <section class ="about">
+  <div class="terminal">
+    <h2>ABOUT ME</h2>
+    <p id="terminal-text"></p>
 
-      <!--Projects in progress-->
-    <h2>Projects in progress</h2>
-    <ul>
-      <li>I am currently working on a website for my mom where she can sell her art</li>
-    </ul>
-    <h2>Skills</h2>
-
-    <h2>Download my CV</h2>
-
-    <h2>Get in touch</h2>
-
-
-
-    </body>
+    <!--Picture of me-->
+  </div>
+      <img src="me.jpeg" alt="image of Anne Broens"></img>
+  </div>
+    
+      <!--Skills-->
+  <div class="skills">
+    <h3>SKILLS</h3>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="skill-bar">
+        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
+      </div>
+      <span>CSS</span>
+      <div class="skill-bar">
+        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
+      </div>
+       <span>CSS</span>
+      <div class="skill-bar">
+        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
+      </div>
+       <span>CSS</span>
+      <div class="skill-bar">
+        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
+      </div>
+       <span>CSS</span>
+      <div class="skill-bar">
+        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
+      </div>
+    </div>
+     </section>

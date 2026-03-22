@@ -1,67 +1,114 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anne Broens Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Courier+New&display=swap" rel="stylesheet">
+  <link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">"
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Anne Broens Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
+  <header>
+    <h1 class="logo">Anne Broens</h1>
+  </header>
+  
 
-  <body>
+<section class="about">
 
-   <!--Header-->
-
-    <header>
-  <a class="logo">Anne Broens</a>
-  <nav>
-    <ul>
-      <li><a id="contact" href="#">Contact me</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects in progress</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-  </nav>
-</div>
-    </header>
-
-    <!--About me-->
-
-    <section class ="about">
+  <!-- Terminal box -->
+<div class="left-column">
   <div class="terminal">
     <h2>ABOUT ME</h2>
     <p id="terminal-text"></p>
+  </div>
 
-    <!--Picture of me-->
+  <img src="hello.jpg" alt="image of Anne Broens">
+</div>
+
+  <!-- Right column: nav + skills -->
+  <div class="nav-box">
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Contact me</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
   </div>
-      <img src="me.jpeg" alt="image of Anne Broens"></img>
-  </div>
-    
-      <!--Skills-->
+
   <div class="skills">
-    <h3>SKILLS</h3>
-    <div class="skill">
-      <span>HTML</span>
-      <div class="skill-bar">
-        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
-      </div>
-      <span>CSS</span>
-      <div class="skill-bar">
-        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
-      </div>
-       <span>CSS</span>
-      <div class="skill-bar">
-        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
-      </div>
-       <span>CSS</span>
-      <div class="skill-bar">
-        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
-      </div>
-       <span>CSS</span>
-      <div class="skill-bar">
-        <div class="skill-bar" class="skill level" style="width: 90%;"></div>
-      </div>
+    <span><h2>Skills in progress</h2></span>
+    <span><strong>HTML</strong></span>
+    <div class="skill-bar">
+      <div class="skill-level" style="width: 80%;">80%</div>
     </div>
-     </section>
+
+    <span>CSS</span>
+    <div class="skill-bar">
+      <div class="skill-level" style="width: 50%;">50%</div>
+    </div>
+
+    <span>JavaScript</span>
+    <div class="skill-bar">
+      <div class="skill-level" style="width: 20%;">20%</div>
+    </div>
+
+    <span>React</span>
+    <div class="skill-bar">
+      <div class="skill-level" style="width: 0%;">0%</div>
+    </div>
+  </div>
+</section>
+
+<section class="second-row">
+  <!-- Second row: projects  -->
+  <div class="project-box">
+    <span><h2>Projects in progress</h2></span>
+    <ol>
+      <li>An art webshop</li>
+      <li>Wedding organisation app</li>
+    </ol>
+  </div>
+
+  <!-- Contact  -->
+  <div class="contact-box">
+    <span><h2>Get in touch</h2></span>
+    <p>Fill out this form and we will be in touch soon!</p>
+    <form action="/example.html" method="POST">
+      <label id="Name">Name</label>
+  <input type="text" name="first-text-field" value="Name" required>
+<br>
+  <br>
+   <label id="E-mail">E-mail</label>
+  <input type="text" name="first-text-field" value="E-mail" required>
+  <br>
+  <br>
+  <label for="Leave a Message">Leave a message</label><br><br>
+  <textarea id="message" name="message" rows="8" cols="50" required>
+  </textarea><br>
+  <br><input type="submit" value="Send">
+</form>
+  </div>
+
+   <!-- download CV  -->
+  <div class="cv-box">
+    <span><h2>Download my CV</h2></span>
+    <button id="download-cv">Download CV</button>
+  </div>
+</section>
+
+</section>
+
+ <footer class="footer">
+    <p>© 2026 Anne Broens</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

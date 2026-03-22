@@ -1,70 +1,61 @@
-/*Universal styles*/
+/* Universal styles */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  padding-left: 0.5rem;
 }
 
-html {
-    font-family: "Inter", sans-serif
-    font-size: 16px;
-    background-color: black;
-    color: white;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f2;
+  color: #333;  
 }
 
-.logo {
-  font-family: "Bitter", serif;
-  font-optical-sizing: auto;
-  font-weight: 400px;
-  font-style: normal;
-  font-size: 50px;
-  color: blueviolet;
+h2, h3 {
+  text-align: center;
+}
+
+.skills, .nav-box, .terminal {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
 }
 
 header {
   display: flex;
-  justify-content: space-between; /* logo left, nav right */
+  justify-content: center;
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-  gap: 24px;        /* even spacing between items */
-  margin: 0;
-  padding: 2rem;
-  list-style: none;
-  justify-content: flex-end;
+.logo {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 10px;
+  font-size: 50px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
+/* Grid layout for about section */
 .about {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  gap: 40px;
-  align-items: center;
-  padding: 60px
+  grid-template-columns: 2fr 2fr; /* terminal | image | right column */
+  gap: 15px;
+  align-items: start;
+  padding: 15px;
 }
 
-.about img {
-  justify-self: center;
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-  padding: 3px;
-}
-
-/* Terminal-style container */
+/* Terminal box */
 .terminal {
-  background-color: white;           /* black background */
-  color: black;                   /* green text */
-  font-family: "Courier New", monospace;
-  line-height: 1.5;;
-  font-size: 16px; /* monospace font */
-  padding: 30px;
-  border-radius: 5px;
-  width: 500px;                      /* adjust as needed */
+  background-color: white;
+  color: black;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  text-align: start;
+  font-size: 16px;
+  line-height: 1.5;
   height: 400px;
+  width: 700px;
   overflow: hidden;
 }
 
@@ -78,34 +69,136 @@ nav ul {
   25%, 75% { opacity: 0; }
 }
 
-/* Skill section  */
-
-.skills h3 {
-  margin-bottom: 20px;
-  font-family: 'Bitter', serif;
+.left-column {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
 
+.left-column img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Nav box */
+.nav-box {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: white;
+  color: #1f2d2b;    
+  padding: 20px 30px;
+  border: 2px solid;
+  border-radius: 8px;
+
+  display: flex;             /* use flexbox */
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* horizontal centering */
+}
+
+nav ul {
+  display: flex;             /* keep horizontal row */
+  flex-direction: row;
+  gap: 40px;                 /* spacing between menu items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f2d2b; /* dark text, better contrast */
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  color: green;
+}
+
+/* Skills box */
 .skills {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #e3e3df;
+  padding: 15px;
+  height: 309px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.skills span h3 {
+  display: block;
+  font-family: '"Inter"', sans-serif;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* Skill bars */
+.skill-bar {
+  display: block;
+  background-color: gray;
+  width: 100%;
+  height: 20px;
+  border-radius: 12px;
   margin-bottom: 15px;
 }
 
-.skill span {
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Skill bar background */
-.skill-bar {
-  background-color: #444;
-  width: 50%;
-  height: 15px;
-  border-radius: 7px;
-  overflow: hidden;
-}
-
-/* Skill level fill */
 .skill-level {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
   height: 100%;
-  background-color: blueviolet; /* green like terminal */
+  background: linear-gradient(90deg, #a8d5ba, #6bbf92);
   border-radius: 8px 0 0 8px;
+
+  padding-right: 8px;
+  font-size: 12px;
+}
+
+.second-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+  gap: 15px;
+  padding: 15px;
+}
+
+.project-box,
+.contact-box,
+.cv-box {
+  background-color: #e3e3df;
+  padding: 15px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #6bbf92;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer {
+  height: 200px;
+  background-color: #6bbf92;
+  justify-content: flex-end;
 }
